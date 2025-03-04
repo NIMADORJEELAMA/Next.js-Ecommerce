@@ -4,12 +4,15 @@ import CategoryList from "@/components/CategoryList";
 import ProductList from "@/components/ProductList";
 import Slider from "@/components/Slider";
 import { WixClientContext } from "@/context/wixContext";
+import { useWixClient } from "@/hooks/useWixClient";
 import { useContext, useEffect } from "react";
 
 const HomePage = () => {
 
 
-  const wixClient = useContext(WixClientContext);
+  const wixClient = useWixClient();
+  console.log("wixClient" , wixClient);
+  
 
 
   useEffect(()=> {
